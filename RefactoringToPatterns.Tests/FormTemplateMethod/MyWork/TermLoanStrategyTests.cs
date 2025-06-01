@@ -25,8 +25,8 @@ namespace RefactoringToPatterns.FormTemplateMethod.MyWork
             var termStrategy = new CapitalStrategyTermLoan();
 
             Assert.Multiple(() => {
-                Assert.AreEqual(20027, termStrategy.Duration(termLoan), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(6008100, termStrategy.Capital(termLoan), TWO_DIGIT_PRECISION);
+                Assert.That(termStrategy.Duration(termLoan), Is.EqualTo(20027).Within(TWO_DIGIT_PRECISION));
+                Assert.That(termStrategy.Capital(termLoan), Is.EqualTo(6008100).Within(TWO_DIGIT_PRECISION));
             });
         }
 

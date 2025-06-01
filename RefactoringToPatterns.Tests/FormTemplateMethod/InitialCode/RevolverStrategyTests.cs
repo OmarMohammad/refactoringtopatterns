@@ -24,8 +24,8 @@ namespace RefactoringToPatterns.FormTemplateMethod.InitialCode
             revolverLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(40027, revolverStrategy.Duration(revolverLoan), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(4002700, revolverStrategy.Capital(revolverLoan), TWO_DIGIT_PRECISION);
+                Assert.That(revolverStrategy.Duration(revolverLoan), Is.EqualTo(40027).Within(TWO_DIGIT_PRECISION));
+                Assert.That(revolverStrategy.Capital(revolverLoan), Is.EqualTo(4002700).Within(TWO_DIGIT_PRECISION));
             });
         }
 

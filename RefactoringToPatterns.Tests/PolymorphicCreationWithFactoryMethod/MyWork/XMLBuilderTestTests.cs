@@ -18,7 +18,7 @@ namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.MyWork
 		[Test]
 		public void test_XMLBuilderTest_has_an_XMLBuilder()
 		{
-			Assert.IsInstanceOf(typeof(XMLBuilder), _xmlBuilderTest.Builder);
+			Assert.That(_xmlBuilderTest.Builder, Is.InstanceOf<XMLBuilder>());
 		}
     }
 }

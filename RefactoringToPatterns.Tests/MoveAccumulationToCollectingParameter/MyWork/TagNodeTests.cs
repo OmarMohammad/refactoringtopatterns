@@ -19,7 +19,7 @@ namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.MyWork
         {
             var expected = "<parent gender='female'>Jennifer</parent>";
             
-            Assert.AreEqual(expected, _tagNode.ToString());
+            Assert.That(_tagNode.ToString(), Is.EqualTo(expected));
         }
         
         [Test]
@@ -30,7 +30,7 @@ namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.MyWork
                                   "</parent>";
             _tagNode.Add(new TagNode("child", "gender='male'", "John"));
             
-            Assert.AreEqual(expected, _tagNode.ToString());
+            Assert.That(_tagNode.ToString(), Is.EqualTo(expected));
         }
     }
 }

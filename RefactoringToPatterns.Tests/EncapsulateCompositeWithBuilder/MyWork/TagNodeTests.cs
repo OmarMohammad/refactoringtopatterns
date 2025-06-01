@@ -22,7 +22,7 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             TagNode priceTag = new TagNode("price");
             priceTag.AddAttribute("currency", "USD");
             priceTag.AddValue(SamplePrice);
-            Assert.AreEqual(expected, priceTag.ToString());
+            Assert.That(expected, Is.EqualTo(priceTag.ToString()));
         }
 
         [Test]
@@ -37,7 +37,7 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             TagNode productTag = new TagNode("product");
             productTag.Add(new TagNode("price"));
 
-            Assert.AreEqual(expected, productTag.ToString());
+            Assert.That(expected, Is.EqualTo(productTag.ToString()));
         }
 
         [Test]
@@ -56,7 +56,7 @@ namespace RefactoringToPatterns.EncapsulateCompositeWithBuilder.MyWork
             orderTag.Add(new TagNode("product"));
             ordersTag.Add(orderTag);
 
-            Assert.AreEqual(expected, ordersTag.ToString());
+            Assert.That(orderTag.ToString(), Is.EqualTo(expected));
         }
     }
 }

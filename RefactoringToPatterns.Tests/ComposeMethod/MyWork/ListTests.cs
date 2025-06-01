@@ -11,7 +11,7 @@ namespace RefactoringToPatterns.ComposeMethod.MyWork
         {
             var list = new List();   
             list.Add(new {});
-            Assert.AreEqual(1, list.Count);
+            Assert.That(list.Count, Is.EqualTo(1));
         }
     }
 }

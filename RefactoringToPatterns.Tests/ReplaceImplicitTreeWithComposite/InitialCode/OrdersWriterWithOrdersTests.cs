@@ -40,7 +40,7 @@ namespace RefactoringToPatterns.ReplaceImplicitTreeWithComposite.InitialCode
                     "</product>" + 
                 "</order>" + 
             "</orders>";
-            Assert.AreEqual(expectedOrder, this.ordersWriter.GetContents());
+            Assert.That(expectedOrder, Is.EqualTo(this.ordersWriter.GetContents()));;
         }
     }
 
@@ -63,7 +63,7 @@ namespace RefactoringToPatterns.ReplaceImplicitTreeWithComposite.InitialCode
             "<orders>" + 
             "</orders>";
 
-            Assert.AreEqual(expectedOrder, this.ordersWriter.GetContents());
+            Assert.That(expectedOrder, Is.EqualTo(this.ordersWriter.GetContents()));;
         }
     }
 }

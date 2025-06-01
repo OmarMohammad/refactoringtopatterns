@@ -17,7 +17,7 @@ namespace RefactoringToPatterns.ExtractComposite.MyWork
         [Test]
         public void it_should_output_a_non_html_formatted_text_representation()
         {
-            Assert.AreEqual("Name:", _labelTag.ToPlainTextString());
+            Assert.That(_labelTag.ToPlainTextString(), Is.EqualTo("Name:"));
         }
     }
 }

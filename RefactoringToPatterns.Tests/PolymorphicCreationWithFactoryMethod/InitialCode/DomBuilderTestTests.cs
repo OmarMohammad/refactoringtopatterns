@@ -18,7 +18,7 @@ namespace RefactoringToPatterns.PolymorphicCreationWithFactoryMethod.InitialCode
         [Test]
         public void test_DOMBuilderTest_has_a_DOMBuilder()
         {
-            Assert.IsInstanceOf(typeof(DOMBuilder), _domBuilderTest.Builder);
+            Assert.That(_domBuilderTest.Builder, Is.InstanceOf<DOMBuilder>());
         }
     }
 }

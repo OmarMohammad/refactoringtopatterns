@@ -22,8 +22,8 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
         {
             
             Assert.Multiple(() => {
-                Assert.AreEqual(1000, _payment.Amount);
-                Assert.AreEqual(_christmasDay, _payment.Date);
+                Assert.That(_payment.Amount, Is.EqualTo(1000));
+                Assert.That(_payment.Date, Is.EqualTo(_christmasDay));
             });
 
         }

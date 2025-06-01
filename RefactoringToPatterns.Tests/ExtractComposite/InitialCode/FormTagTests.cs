@@ -20,7 +20,7 @@ namespace RefactoringToPatterns.ExtractComposite.InitialCode
             _formTag.AddChild(new LabelTag(new StringNode("Hi, I'm A Label.")));
             _formTag.AddChild(new LabelTag(new StringNode("You're not the only one, I'm a Label too!")));
             
-            Assert.AreEqual("Hi, I'm A Label.You're not the only one, I'm a Label too!",_formTag.ToPlainTextString());
+            Assert.That(_formTag.ToPlainTextString(), Is.EqualTo("Hi, I'm A Label.You're not the only one, I'm a Label too!"));
         }
     }
 }

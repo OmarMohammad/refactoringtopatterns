@@ -32,7 +32,7 @@ namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.InitialCod
             
             AccumulateWithString(notMyFullName);
             
-            Assert.AreNotEqual(expectedFullName, notMyFullName);
+            Assert.That(expectedFullName, Is.Not.EqualTo(notMyFullName));
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace RefactoringToPatterns.MoveAccumulationToCollectingParameter.InitialCod
             
             AccumulateWithStringBuffer(myFullName);
             
-            Assert.AreEqual(expectedFullName, myFullName.ToString());
+            Assert.That(expectedFullName, Is.EqualTo(myFullName.ToString()));
         }
 
         public void AccumulateWithString(string accumulator)

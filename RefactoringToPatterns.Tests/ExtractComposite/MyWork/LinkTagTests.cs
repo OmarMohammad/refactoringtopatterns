@@ -20,7 +20,7 @@ namespace RefactoringToPatterns.ExtractComposite.MyWork
             _linkTag.AddChild(new StringNode("Hi, I'm Link."));
             _linkTag.AddChild(new StringNode("My text becomes a link!"));
 
-            Assert.AreEqual("Hi, I'm Link.My text becomes a link!",_linkTag.ToPlainTextString());
+            Assert.That(_linkTag.ToPlainTextString(), Is.EqualTo("Hi, I'm Link.My text becomes a link!"));
         }
         
     }

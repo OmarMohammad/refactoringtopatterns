@@ -24,8 +24,8 @@ namespace RefactoringToPatterns.FormTemplateMethod.InitialCode
             advisedLineLoan.Payment(1000.00, November(20, 2005));
             advisedLineLoan.Payment(1000.00, November(20, 2006));
 
-            Assert.AreEqual(40027, advisedLineStrategy.Duration(advisedLineLoan), TWO_DIGIT_PRECISION);
-            Assert.AreEqual(1200810, advisedLineStrategy.Capital(advisedLineLoan), TWO_DIGIT_PRECISION);
+            Assert.That(advisedLineStrategy.Duration(advisedLineLoan), Is.EqualTo(40027).Within(TWO_DIGIT_PRECISION));
+            Assert.That(advisedLineStrategy.Capital(advisedLineLoan), Is.EqualTo(1200810).Within(TWO_DIGIT_PRECISION));
         }
 
         private static DateTime November(int dayOfMonth, int year)

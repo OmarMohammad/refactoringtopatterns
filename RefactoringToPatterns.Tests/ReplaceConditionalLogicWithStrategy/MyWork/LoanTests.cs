@@ -29,8 +29,8 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
             termLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(20027, termLoan.Duration(), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(6008100, termLoan.Capital(), TWO_DIGIT_PRECISION);
+                Assert.That(termLoan.Duration(), Is.EqualTo(20027).Within(TWO_DIGIT_PRECISION));
+                Assert.That(termLoan.Capital(), Is.EqualTo(6008100).Within(TWO_DIGIT_PRECISION));
             });
         }
 
@@ -46,8 +46,8 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
             revolverLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(40027, revolverLoan.Duration(), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(4002700, revolverLoan.Capital(), TWO_DIGIT_PRECISION);
+                Assert.That(revolverLoan.Capital(), Is.EqualTo(4002700).Within(TWO_DIGIT_PRECISION));
+                Assert.That(revolverLoan.Duration(), Is.EqualTo(40027).Within(TWO_DIGIT_PRECISION));
             });
         }
 
@@ -64,8 +64,8 @@ namespace RefactoringToPatterns.ReplaceConditionalLogicWithStrategy.MyWork
             advisedLineLoan.Payment(1000.00, November(20, 2006));
 
             Assert.Multiple(() => {
-                Assert.AreEqual(40027, advisedLineLoan.Duration(), TWO_DIGIT_PRECISION);
-                Assert.AreEqual(1200810, advisedLineLoan.Capital(), TWO_DIGIT_PRECISION);
+                Assert.That(advisedLineLoan.Duration(), Is.EqualTo(40027).Within(TWO_DIGIT_PRECISION));
+                Assert.That(advisedLineLoan.Capital(), Is.EqualTo(1200810).Within(TWO_DIGIT_PRECISION));
             });
         }
 
